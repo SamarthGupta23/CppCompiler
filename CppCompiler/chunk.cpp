@@ -6,8 +6,9 @@ void Chunk::initChunk()
     this->constants.initValueVector();
 }
 
-void Chunk::writeChunk(Opcode byte)
+void Chunk::writeChunk(Opcode byte , int line)
 {
+    this->lines.push_back(line);
     this->code.push_back(byte);
 }
 
